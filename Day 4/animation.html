@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title>Animation</title>
+    <style>
+        .logo {
+            color: red;
+            animation-name: bouce;
+            animation-duration: 0.5s;
+            animation-iteration-count: 10;
+        }
+        @keyframes bouce {
+            0% {transform: translateY(0px);}
+            50% {transform: translateY(20px);}
+            100% {transform: translateY(0px);}
+        }
+        .new-collection {
+            text-align: center; 
+            font-size: 30px;
+            position: relative;
+        }
+        .new-collection::before {
+            content: "";
+            width: 4px;
+            height: 40px;
+            background-color: red;
+            position: absolute;
+            transform: translateX(-15px);
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Color Changing Animation </h1>
+    <br>
+    <div class="color-changing-animation"> </div>
+    <h1 class="logo"> Attire </h1>
+    <div class="new-collection">
+        New Collection
+    </div>
+</body>
+</html>
